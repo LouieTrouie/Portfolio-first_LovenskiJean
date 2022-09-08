@@ -1,0 +1,48 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  height: 100px;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 1336px;
+  background-image: url(https://www.georgerrmartin.com/theme/header-bg.jpg);
+  background-color: grey;
+}
+
+
+
+.shield{
+  background-image: url(https://i.imgur.com/LFQPWGl.gif);
+  width: 3.5%;
+  height: 75px;
+  position: relative;
+  top: 15px;
+}
+
+.grrm{
+  background-image: url(https://georgerrmartin.com/wp-content/themes/GRRM/images/header-2.jpg);
+  width: 38%;
+  height: 102px;
+}
+
+
+.social{
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social img{
+  position: relative;
+  bottom: 80px;
+}

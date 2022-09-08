@@ -1,0 +1,7 @@
+.redBlock{
+width: 250px;
+
+      height: 250px;
+
+      box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,43 @@
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.container-1{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 600px;
+  height: 600px;
+}
+
+.item{
+  height: 50px;
+  /* width: 20%; */
+  /* background-color: salmon; */
+  flex: 1;
+  text-align: center;
+}
+.red-bg{
+  background-color:
+}
+
+
+.blue-bg{
+  background-color:
+}
+
+
+.green-bg{
+  background-color:
+}
+
+
+.pink-bg{
+  background-color:
+}
+
+
+.yellow-bg{
+  background-color:
+}

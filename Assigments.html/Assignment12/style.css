@@ -1,0 +1,77 @@
+/* DO NOT TOUCH THE CSS BELOW */
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+header,
+footer {
+  background-color: skyblue;
+  padding: 12px 24px;
+  text-align: center;
+}
+header h1 {
+  font-size: 24px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+}
+article {
+  padding: 24px;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+}
+.fakeLink {
+  background: linear-gradient(to bottom, cornflowerblue, darkslateblue);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  text-align: center;
+}
+.fakeLink2 {
+  background: linear-gradient(to bottom, yellow, goldenrod);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 12px;
+  text-align: center;
+}
+.fakeLink:hover,
+.fakeLink2:hover {
+  opacity: 80%;
+}
+
+/* your CSS for tablet goes in here */
+@media screen and (min-width: 480px) and (max-width: 799px) {
+aside{
+  flex-direction: row;
+  flex-wrap: wrap;
+    }
+    aside  .fakeLink, .fakeLink2{
+      width: 50%;
+      height: 125px;
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+/* your CSS for desktop goes in here */
+@media screen and (min-width: 800px) {
+aside{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+aside .fakeLink{
+  width: 100%;
+}
+
+aside .fakeLink2{
+  flex: 1;
+  height: 100PX;
+  align-items: center;
+  justify-content: center;
+}
+}

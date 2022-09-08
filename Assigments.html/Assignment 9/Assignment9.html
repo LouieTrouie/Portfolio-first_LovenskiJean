@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 9</title>
+    <style>
+      /* Don't touch the CSS below */
+      body {
+        font-family: Verdana;
+      }
+
+      .column {
+        margin-bottom: 100px;
+        width: 600px;
+      }
+
+      .redBlock,
+      .blueBlock,
+      .box {
+        box-sizing: border-box;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .redBlock,
+      .blueBlock {
+        padding: 75px;
+        width: 200px;
+      }
+
+      .redBlock {
+        background-color: red;
+      }
+
+      .blueBlock {
+        background-color: skyblue;
+      }
+
+      .box {
+        border: 1px solid black;
+        padding: 25px;
+        width: 75px;
+      }
+
+      .letterBox {
+        background-color: pink;
+      }
+
+      .numberBox {
+        background-color: lightgreen;
+      }
+
+      /* Your CSS to complete the assignment goes here */
+      #task1Block{
+        float: left;
+        }
+      #task2Block{
+        float: left;
+        }
+      #task3Block1{
+        float: right;
+        }
+      #task3Block2{
+        float: left;
+        }
+      #task4BlockA #task4BlockB #task4BlockC #task4BlockD #task4BlockE{
+        float: left;
+        clear:left;
+        }
+      #task4Block1 #task4Block2 #task4Block3 #task4Block4 #task4Block5{
+
+        float: right;
+
+        }
+
+        #task5P1{
+          float: left;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>Assignment 9 - Floats and Clears</h1>
+    <div class="column">
+      <h2>Task 1 - Text and Floats (Left)</h2>
+      <h3>Make the red block below float left.</h3>
+      <div id="task1Block" class="redBlock">FLOAT LEFT</div>
+      <p>
+        Ullamco elit dolore nam culpa, multos laboris nam sint dolor
+        do possumus fugiat illum pariatur fore, hic velit nisi de
+        cernantur. Enim probant incurreret. Offendit aliqua pariatur
+        excepteur, ubi sunt cupidatat domesticarum, ab multos multos
+        se consequat, ne magna probant constias iis commodo fugiat
+        do doctrina exercitation, minim proident appellat, ubi id
+        elit cupidatat, ea te praesentibus.Amet expetendis qui
+        consequat. Nam aut philosophari, summis efflorescere laborum
+        amet laboris, irure arbitror e proident, appellat sunt
+        cupidatat, mentitum praesentibus quo aliquip, nostrud velit
+        pariatur pariatur, nulla expetendis laborum ita a ubi minim
+        fabulas. Sunt ne aliquip si offendit quorum probant officia.
+        Ab sint sint e expetendis id malis ut incurreret.
+      </p>
+      <h2>Task 2 - Text and Floats (Right)</h2>
+      <h3>Make the blue block below float left.</h3>
+      <div id="task2Block" class="blueBlock">FLOAT RIGHT</div>
+      <p>
+        Fore admodum incididunt qui cernantur si arbitror, ubi
+        dolore praetermissum, a anim occaecat officia. Nulla
+        familiaritatem ingeniis anim possumus id tempor quamquam
+        doctrina id ubi tempor tempor o appellat si in velit ita
+        quem, quis consequat nam quae labore eu ita litteris in
+        excepteur, dolor offendit consequat, se dolor coniunctione.
+        Probant quo fore.Legam admodum e tractavissent, do voluptate
+        despicationes, do excepteur distinguantur, e cillum do quis.
+        Deserunt id sunt offendit, minim te doctrina ex ipsum
+        comprehenderit possumus enim senserit iis si velit legam se
+        commodo. Quid nostrud imitarentur hic do incididunt
+        coniunctione.
+      </p>
+      <p>
+        Aut proident imitarentur. Arbitror export tempor quibusdam
+        culpa sed commodo minim culpa senserit esse quo summis
+        litteris senserit, ita cernantur domesticarum. Se nisi
+        transferrem ubi ex sint legam e offendit.Aut elit aliquip
+        ullamco, labore instituendarum senserit minim constias.
+        Proident ea elit, nisi cupidatat arbitrantur. Eram ubi do
+        legam vidisse. Est veniam sed fore ex aliquip ab appellat,
+        nisi illustriora probant velit offendit ut vidisse quis ut
+        nostrud voluptatibus.
+      </p>
+      <h2>Task 3 - Text and Floats (Both)</h2>
+      <h3>
+        Make the red block below float left, and the blue block float right.
+      </h3>
+      <div id="task3Block1" class="blueBlock">FLOAT RIGHT</div>
+      <div id="task3Block2" class="redBlock">FLOAT LEFT</div>
+      <p>
+        A fugiat mandaremus o multos constias de cupidatat. Ipsum et
+        expetendis ex quem admodum si instituendarum, ne dolor
+        sempiternum ubi fore quibusdam de elit fugiat. Vidisse amet
+        an quamquam sempiternum. Quamquam o fore, de laborum iis
+        incurreret, de multos firmissimum, duis an cernantur o
+        cillum.Iudicem dolore consequat laborum. An aute arbitror,
+        hic eram sempiternum, eu quorum eu dolore qui illum possumus
+        in irure sunt. Quem exquisitaque admodum nisi constias. Eu
+        esse irure in iudicem ad ex excepteur hic deserunt, in velit
+        sed enim aut culpa consequat quamquam.
+      </p>
+    </div>
+    <div class="column">
+      <h2>Task 4 - Floats and Clears</h2>
+      <h3>
+        Make letters float left, then clear, and make the numbers float right.
+      </h3>
+      <div id="task4BlockA" class="box letterBox">A</div>
+      <div id="task4BlockB" class="box letterBox">B</div>
+      <div id="task4BlockC" class="box letterBox">C</div>
+      <div id="task4BlockD" class="box letterBox">D</div>
+      <div id="task4BlockE" class="box letterBox">E</div>
+      <div id="task4BlockBlank" class="clearBox"></div>
+      <div id="task4Block1" class="box numberBox">1</div>
+      <div id="task4Block2" class="box numberBox">2</div>
+      <div id="task4Block3" class="box numberBox">3</div>
+      <div id="task4Block4" class="box numberBox">4</div>
+      <div id="task4Block5" class="box numberBox">5</div>
+    </div>
+    <div class="column">
+      <h2>Task 5 - Floats and Layouts</h2>
+      <h3>
+        Make the three P tags below into a 3-column layout using float.
+      </h3>
+      <p id="task5P1" class="task5P">
+        Quem laborum appellat. O probant ne incididunt, aut culpa
+        aliqua a appellat, ex anim nam quae, qui incurreret
+        reprehenderit. E magna mentitum.Ne illum aliquip quamquam,
+        non fore a export. Et nam fugiat appellat, deserunt quo
+        cillum in fugiat admodum fidelissimae hic summis iis
+        fabulas. Iis cernantur et admodum nam ad cillum irure id
+        cernantur ita si occaecat arbitrantur ita laboris
+        efflorescere e mentitum.
+      </p>
+      <p id="task5P2" class="task5P">
+        Nulla incididunt praesentibus, velit nescius proident,
+        probant multos officia, vidisse export non constias
+        imitarentur, quae vidisse efflorescere in doctrina nisi
+        irure ex magna o non export arbitrantur ab si nulla cillum o
+        senserit. Noster do commodo qui fugiat de eiusmod a eram.
+        Iis nam eruditionem ita fore cernantur iis illustriora,
+        noster incididunt ne commodo, fugiat possumus qui mentitum,
+        voluptate quis ex appellat relinqueret, dolore iudicem
+        despicationes, quorum arbitror philosophari si excepteur
+        sunt nisi ad fugiat. In ipsum litteris incurreret, amet
+        probant a amet sint, si culpa arbitror offendit, dolore et e
+        quem litteris.Culpa offendit arbitror an aliquip amet
+        doctrina doctrina. Id veniam commodo transferrem, mandaremus
+        nulla dolor ne aliqua, a minim cohaerescant eu ingeniis
+        instituendarum ubi fabulas. Export ex a culpa arbitror,
+        admodum labore elit aliquip nisi e o culpa magna esse
+        constias, dolor ubi te aliqua proident.
+      </p>
+      <p id="task5P3" class="task5P">
+        Labore iudicem non cillum tamen, nisi nostrud hic voluptate
+        de appellat qui summis possumus, constias irure ullamco
+        constias. Si nam export mandaremus ex fugiat et ne aliqua
+        nescius id fore e admodum ita dolor ea non si fidelissimae.
+        Velit sempiternum expetendis tamen incididunt de dolore
+        nostrud ut ullamco id admodum ubi labore, minim commodo et
+        quis quid. Qui eram malis amet eiusmod, fugiat laborum
+        fidelissimae a eiusmod ita fugiat incididunt, arbitror de
+        illum.Appellat iis occaecat. Se ne arbitrantur, ullamco
+        summis si excepteur distinguantur non excepteur veniam
+        pariatur ad a quis magna o proident. Mandaremus nisi velit
+        mandaremus tamen, nulla doctrina aliquip est senserit amet
+        consequat, quo dolore qui sint.
+      </p>
+    </div>
+  </body>
+</html>
