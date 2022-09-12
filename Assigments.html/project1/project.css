@@ -1,48 +1,74 @@
 body{
-  margin: 0;
+background-color: lightgrey;
+}
+header{
+  display: flex;
+  flex-direction: row;
+}
+#shield{
+  background-image: url("images/shield-spin.jpg");
+  background-position: left top;
+  height: 75px;
+  width: 65px;
+}
+
+
+h1 {
+  font-family: 'Montaga',serif;
+}
+
+nav{
+  grid-area: Nav;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
   padding: 0;
 }
+nav ul li{
+  flex: 1;
+  text-align: center;
 
-.container{
-  display: flex;
-  justify-content: center;
-  min-width: 100%;
-  height: 100px;
 }
 
-.header{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 1336px;
-  background-image: url(https://www.georgerrmartin.com/theme/header-bg.jpg);
-  background-color: grey;
+#banner{
+  background-image: url("../images/FandB-banner.jpg");
+  height: 300px;
+  grid-area: banner;
+  background-position: center;
 }
 
-
-
-.shield{
-  background-image: url(https://i.imgur.com/LFQPWGl.gif);
-  width: 3.5%;
-  height: 75px;
-  position: relative;
-  top: 15px;
+#cards{
+  grid-area: cards;
+}
+main{
+  grid-area: blog;
 }
 
-.grrm{
-  background-image: url(https://georgerrmartin.com/wp-content/themes/GRRM/images/header-2.jpg);
-  width: 38%;
-  height: 102px;
+#grid{
+  grid-template-columns: 1fr 333px 334px 333px 1fr;
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-areas:
+  ". header  header header."
+  ". nav      nav   nav   ."
+  ". banner banner  banner."
+  ". cards  cards  cards  ."
+  ". sidenav  blog  blog  ."
+  ". footer footer footer ."
+  ".bottom bottom  bottom .";
 }
-
-
-.social{
-  width: 15%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.social img{
-  position: relative;
-  bottom: 80px;
+@media screen and (max-width: 1000px){
+  #grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "banner"
+    "cards"
+    "blog"
+    "sidenav"
+    "footer"
+    "bottom";
+  }
 }
