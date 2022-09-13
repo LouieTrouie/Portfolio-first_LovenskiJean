@@ -1,0 +1,36 @@
+body{
+  height: 1500px;
+  position: relative;
+}
+
+nav{
+  background-color: skyblue;
+}
+
+#navbar1{
+  background-color: brown;
+  position: fixed;
+  width: 100%
+}
+
+#navbar2{
+  background-color: forestgreen;
+  position: relative;
+  top: 150px;
+}
+#navbar3{
+  background-color: lightgreen;
+  position: absolute;
+  bottom: 150px;
+}
+li{
+  display: inline;
+  padding: 10px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+
+}
