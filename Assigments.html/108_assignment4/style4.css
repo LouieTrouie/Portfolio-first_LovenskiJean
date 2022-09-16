@@ -1,0 +1,46 @@
+nav{
+  background-color: forestgreen;
+}
+
+
+ul{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+
+li{
+  display: inline;
+  padding: 10px;
+}
+
+
+#home{
+  margin-left: auto;
+}
+
+
+.dropdowncontainer{
+  position: relative;
+}
+
+
+.dropdownMenu{
+  background-color: brown;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  left: 0px;
+  top: 75%;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+  opacity 1s,
+  visibility 0.5s,
+  top 0.5s;
+}
+.dropdowncontainer:hover .dropdownMenu{
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
