@@ -1,0 +1,170 @@
+/* Google Font API imports - found at https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*****************************************************************************
+  Heading, Link, and Misc. Styles
+*****************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-family: 'Secular One', sans-serif;
+}
+
+h4,
+p {
+  font-family: 'Assistant', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav,
+nav a,
+footer a {
+  color: indigo;
+}
+
+nav a:hover,
+footer a:hover {
+  text-decoration: underline;
+}
+
+/****************************************************************************
+  Grid styles
+****************************************************************************/
+#siteGrid {
+  display: grid;
+  grid-template-columns: 1fr 1000px 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+  "navArea navArea navArea"
+  "heroArea heroArea heroArea"
+  ". threeCardsArea ."
+  ". gallery1Area ."
+  ". twoCardsArea ."
+  "footerArea footerArea footerArea";
+}
+ nav {
+   grid-area: navArea;
+ }
+  #hero {
+    grid-area: heroArea;
+  }
+  #threeCards {
+    grid-area: threeCardsArea;
+  }
+  #gallery1 {
+    grid-area: gallery1Area;
+  }
+  #twoCards {
+    grid-area: twoCardsArea;
+  }
+  footer {
+    grid-area: footerArea;
+  }
+  section {
+    border: 4px soild indigo;
+  }
+/****************************************************************************
+  Nav/Footer styles
+****************************************************************************/
+nav {
+  align-items: center;
+  display: flex;
+  margin: 0 24px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+#navLinks,
+.socialMedia {
+  display: flex;
+  list-style-type: none;
+}
+
+#navLinks li,
+.socialMedia li {
+  padding: 0 4px;
+}
+
+nav .socialMedia {
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.socialMedia i {
+  font-size: 20px;
+}
+
+nav,
+nav a,
+footer a {
+  color: indigo;
+}
+
+nav a:hover,
+footer a:hover {
+  text-decoration: underline;
+}
+
+nav ul,
+nav h2 {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+
+/****************************************************************************
+  Hero styles
+****************************************************************************/
+
+/****************************************************************************
+  Card styles
+****************************************************************************/
+
+/****************************************************************************
+  Gallery styles
+****************************************************************************/
+
+/****************************************************************************
+  Media Query - Mobile Breakpoint
+****************************************************************************/
+@media screen and (max-width: 1000px) {
+  #siteGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "navArea"
+    "heroArea"
+    "threecardsArea"
+    "gallery1Area"
+    "twocardsArea"
+    "footerArea";
+    }
+
+  nav{
+    flex-direction: column;
+  }
+  }
