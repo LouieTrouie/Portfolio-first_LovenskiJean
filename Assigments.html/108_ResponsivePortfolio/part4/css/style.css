@@ -1,0 +1,328 @@
+/* Google Font API imports - found at https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*****************************************************************************
+  Heading, Link, and Misc. Styles
+*****************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-family: 'Secular One', sans-serif;
+}
+
+h4,
+p {
+  font-family: 'Assistant', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav,
+nav a,
+footer a {
+  color: indigo;
+}
+
+nav a:hover,
+footer a:hover {
+  text-decoration: underline;
+}
+
+/****************************************************************************
+  Grid styles
+****************************************************************************/
+#siteGrid {
+  display: grid;
+  grid-template-columns: 1fr 1000px 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+  "navArea navArea navArea"
+  "heroArea heroArea heroArea"
+  ". threeCardsArea ."
+  ". galleryArea ."
+  ". carouselArea ."
+  ". twoCardsArea ."
+  "footerArea footerArea footerArea";
+}
+ nav {
+   grid-area: navArea;
+ }
+  #hero {
+    grid-area: heroArea;
+  }
+  #threeCards {
+    grid-area: threeCardsArea;
+  }
+  #gallery {
+    grid-area: galleryArea;
+  }
+  #carousel{
+    grid-area: carouselArea;
+  }
+  #twoCards {
+    grid-area: twoCardsArea;
+  }
+  footer {
+    grid-area: footerArea;
+  }
+  section {
+    border: 4px soild indigo;
+  }
+/****************************************************************************
+  Nav/Footer styles
+****************************************************************************/
+nav {
+  align-items: center;
+  display: flex;
+  margin: 0 24px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+#navLinks,
+.socialMedia {
+  display: flex;
+  list-style-type: none;
+}
+
+#navLinks li,
+.socialMedia li {
+  padding: 0 4px;
+}
+
+nav .socialMedia {
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.socialMedia i {
+  font-size: 20px;
+}
+
+nav,
+nav a,
+footer a {
+  color: indigo;
+}
+
+nav a:hover,
+footer a:hover {
+  text-decoration: underline;
+}
+
+nav ul,
+nav h2 {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+
+/****************************************************************************
+  Hero styles
+****************************************************************************/
+#hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("../assets/abstractBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#hero h1,
+#hero h4,{
+  color: orange;
+}
+
+#hero a {
+  background-color: white;
+  color: orange;
+  border: soild 2px orange;
+  border-radius: 24px;
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 12px;
+  min-width: 150px;
+  transition: transform 0.5s;
+}
+
+#hero a:hover{
+  transform: scale(1.1);
+}
+
+
+/****************************************************************************
+  Card styles
+****************************************************************************/
+#threeCards,
+#twoCards{
+  display: flex;
+}
+.card{
+  border: 2px soild orange;
+  color: orange;
+  margin: 48px 24px 24px;
+  padding: 12px 12px 24px;
+  text-align: center;
+  box-shadow: 4px 4px 8px 0px grey;
+  flex-grow: 1;
+}
+
+.card p{
+  font-size: 18px;
+  min-height: 100px;
+}
+
+
+
+/****************************************************************************
+  Gallery styles
+****************************************************************************/
+#gallery{
+  text-align: center;
+}
+#gallery1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#gallery1 img {
+  width: 100%;
+}
+
+
+#gallery2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#gallery2 img {
+  height: 266.6px;
+  width: 266.6px;
+  object-fit: cover;
+}
+
+
+#gallery3{
+  display: flex;
+  flex-wrap: wrap;
+}
+#gallery3 img {
+  height: 200px;
+  margin: 12px;
+  flex: 1 0 auto;
+  object-fit: cover;
+}
+
+#gallery4{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 1100px;
+}
+#gallery4 img {
+  width: 30%;
+  margin: 12px;
+}
+
+
+#gallery5{
+  columns: 3 auto;
+  column-gap: 24px;
+}
+#gallery5 img {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+
+
+
+#carousel{
+  text-align: center;
+}
+
+#carousel img {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.d-block{
+
+  margin: 12px;
+}
+
+
+
+
+/****************************************************************************
+  Media Query - Mobile Breakpoint
+****************************************************************************/
+@media screen and (max-width: 1000px) {
+  #siteGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "navArea"
+    "heroArea"
+    "threecardsArea"
+    "galleryArea"
+    "carouselArea"
+    "twocardsArea"
+    "footerArea";
+    }
+
+  nav{
+    flex-direction: column;
+  }
+#threeCards,
+#twoCards{
+  flex-direction: column;
+}
+
+#gallery1,
+#gallery2{
+  grid-template-columns: 1fr;
+
+}
+
+#gallery2 img {
+  width: 100%;
+  height: auto;
+}
+
+#gallery4 img {
+  width: 45%;
+}
+
+#gallery5 {
+  columns: 2 auto;
+
+
+}
+
+  }
