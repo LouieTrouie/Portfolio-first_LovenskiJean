@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 21-Countdown </title>
+    <style media="screen">
+
+      body{
+        margin:0;
+
+}
+h1{
+  text-decoration-color: green;
+}
+
+}
+}
+#image{
+  display: flex;
+  justify-content: fixed;
+}
+
+      }
+      #hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: green:
+      }
+
+    </style>
+  </head>
+  <body>
+  <div id="hero">
+    <h1 id="countdown">Girlfriend's Z-Day!...</h1>
+    </div>
+    <div id="image">
+      <img src="https://images.unsplash.com/photo-1617909660121-ee367f2874ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80">
+    </div>
+    <script type="text/javascript">
+    function convertToDaysLeft(milliseconds) {
+      return Math.floor(milliseconds / (1000 * 60 * 60 * 24));
+    }
+
+    function convertToHoursLeft(milliseconds) {
+      return Math.floor(
+        (milliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+    }
+
+    function convertToMinutesLeft(milliseconds) {
+      return Math.floor(
+        (milliseconds % (1000 * 60 * 60)) / (1000 * 60)
+      );
+    }
+
+    function convertToSecondsLeft(milliseconds) {
+      return Math.floor(
+        (milliseconds % (1000 * 60)) / 1000
+      );
+    }
+
+    function formatCountdownText(days, hours, minutes, seconds) {
+      return `${days}d ${hours}h ${minutes}m ${seconds}s left`;
+    }
+
+      let deadline = new Date("October 23,2022 00:00:00");
+      let countdown = document.getElementById("countdown");
+      countdown.innerHTML ="";
+
+      function setcountdown() {
+        let now = new Date();
+        let timeleft =deadline.getTime() - now.getTime();
+        let daysleft = convertToDaysLeft(timeleft);
+        let hourleft = convertToHoursLeft(timeleft);
+        let minutesleft = convertToMinutesLeft(timeleft);
+        let secondsleft = convertToSecondsLeft(timeleft);
+
+        countdown.innerHTML =
+        formatCountdownText(daysleft, hourleft, minutesleft,  secondsleft,);
+      }
+      setInterval(setcountdown,1000);
+    </script>
+    </body>
+</html>
