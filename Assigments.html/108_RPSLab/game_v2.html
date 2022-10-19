@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link href="css/style_v2.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Rock, Paper, Scissors!</h1>
+    <div id="game">
+      <div id="duel">
+        <div id="left">
+          <img id="rockLeft" src="images/RPS_RockL.png">
+          <img id="paperLeft" src="images/RPS_PaperL.png">
+          <img id="scissorsLeft" src="images/RPS_ScissorsL.png">
+        </div>
+        <div id="right">
+          <img id="rockRight" src="images/RPS_RockR.png">
+          <img id="paperRight" src="images/RPS_PaperR.png">
+          <img id="scissorsRight" src="images/RPS_ScissorsR.png">
+        </div>
+      </div>
+      <h3 id="selections">You picked <span id="yourPickText"></span>. I picked <span id="myPickText"></span>.</h3>
+      <h2 id="result"></h2>
+      <h4>Refresh the page to play again!</h4>
+    </div>
+
+    <script src="js/logic.js"></script>
+    <script type="text/javascript">
+      playGame(PAPER);
+    </script>
+  </body>
+</html>

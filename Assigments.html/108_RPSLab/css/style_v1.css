@@ -1,0 +1,5 @@
+/* Simple starting css to center body content and update the font-family */
+body {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}

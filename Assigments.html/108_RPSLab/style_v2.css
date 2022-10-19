@@ -1,0 +1,65 @@
+/* Simple starting css to center body content and update the font-family */
+body {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+
+/*****************************************************************************
+  Game results CSS is found here
+*****************************************************************************/
+/*
+  Make sure the content inside the game element is centered, and doesn't
+  expand past the max width of 800px.
+*/
+#game {
+  max-width: 800px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/*
+  Use flexbox to evenly distribute the left and right space to the two sides
+  of the Rock Paper Scissors "duel" between the left and right hands
+*/
+#duel {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+/* Set the width of the hand containers to be relative to the total width */
+#left,
+#right {
+  width: 30%;
+}
+
+/*****************************************************************************
+  Hand visibility related CSS is found here
+*****************************************************************************/
+
+/* Hide all hand variations by default, and make them fill their containers */
+#rockLeft,
+#paperLeft,
+#scissorsLeft,
+#rockRight,
+#paperRight,
+#scissorsRight {
+  display: none;
+  width: 100%;
+}
+
+/*
+  When the selected class is applied to a hand variation, we need to make it
+  visible again, so we set display back to block.  Only one hand variation
+  per side (left vs right) should be visible at a time.
+*/
+#rockLeft.selected,
+#paperLeft.selected,
+#scissorsLeft.selected,
+#rockRight.selected,
+#paperRight.selected,
+#scissorsRight.selected {
+  display: block;
+}
