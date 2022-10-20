@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bouncing Ball</title>
+<style>
+    #room{
+      border: 5px solid black;
+      position: relative;
+    }
+
+    #ball{
+      align-items: center;
+      background-color: green;
+      border-radius: 50%;
+      display: flex;
+      font-weight: bold;
+      font-family: Verdana;
+      justify-content: center;
+      position: relative;
+    }
+let roomWidth = 600px;
+let roomheight = 500px;
+let ballWidth = 80;
+let ballHeight = 80;
+
+    let room = document.getElementById("room");
+    room.style.width = roomWidth + "px";
+    room.style.height = roomheight + "px";
+
+    let ball = document.getElementById("ball");
+    ball.style.width = ballWidth + "px";
+    ball.style.height = ballHeight + "px";
+
+let ballX =0;
+let ballY =0;
+let ballXSpeed =3;
+let ballYSpeed =0;
+let gravity = 0.3;
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+<div id="room">
+  <div id="ball"></div>
+  </div>
+  <script type="text/javascript">
+
+  </script>
+
+  </body>
+</html>

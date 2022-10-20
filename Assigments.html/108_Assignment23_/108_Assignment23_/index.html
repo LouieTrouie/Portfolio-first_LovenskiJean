@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 23 - Lightbox Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+  </head>
+  <body>
+    <!-- Gallery Code -->
+    <div id="gallery">
+      <img class="galleryImage" src="images/Anime.1.jpg" alt="AnimeCharacter">
+      <img class="galleryImage" src="images/Anime.2.jpg" alt="AnimeCharacter">
+      <img class="galleryImage" src="images/Anime.3.jpg" alt="AnimeCharacter">
+      <img class="galleryImage" src="images/Anime.4.jpg" alt="AnimeCharacter">
+      <img class="galleryImage" src="images/Anime.5.jpg" alt="AnimeCharacter">
+      <img class="galleryImage" src="images/Anime.6.jpg" alt="AnimeCharacter">
+      <img class="galleryImage" src="images/Anime.7.jpg" alt="AnimeCharacter">
+      <img class="galleryImage" src="images/Anime.8.jpg" alt="AnimeCharacter">
+    </div>
+
+    <!-- Lightbox Code -->
+    <div id="lightboxContainer">
+      <div id="lightboxBackground" class="closer"></div>
+      <img id="lightbox" src="" alt="">
+      <span id="lightboxCloser" class="closer">×</span>
+    </div>
+
+    <!-- Lightbox JavaScript -->
+    <script type="text/javascript">
+    let lightboxContainer = document.getElementById('lightboxContainer');
+    let lightbox = document.getElementById('lightbox');
+
+    let galleryImages = document.getElementsByClassName('galleryImage');
+    for (let i = 0; i < galleryImages.length; i++){
+      let galleryImage = galleryImages[i];
+      galleryImage.onclick = function(){
+        lightboxContainer.classlist.add('display');
+        lightbox.src = this.src;
+        lightbox.alt = this.alt;
+      };
+    }
+
+let closers = document.getElementsByClassName('closer');
+for(let i = 0; i< closers.length; i++){
+  let closer = closers[i];
+  closer.onclick = function(){
+    lightboxContainer.classlist.remove('display');
+    lightbox.src = "";
+    lightbox.alt = "";
+  }
+}
+    </script>
+  </body>
+</html>
