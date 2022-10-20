@@ -1,0 +1,192 @@
+/* Simple starting css to center body content and update the font-family */
+body {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  background-color: green;
+}
+
+/*****************************************************************************
+  Popup-related CSS is found here
+*****************************************************************************/
+/*
+  Position and center the popup container across the whole page.
+  Hide the popup by default.
+*/
+#popupContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+/* Reveal the popup when the 'popped' class is added */
+#popupContainer.popped {
+  display: flex;
+}
+/* Make the overlay partially transparent and on top of page content */
+#overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #000022;
+  opacity: 0.8;
+  z-index: 10;
+}
+/* Make the popup be on top of the overlay and style it */
+#popup {
+  background: forestgreen;
+  border-radius: 36px;
+  padding: 36px 24px 72px;
+  position: relative;
+  z-index: 15;
+}
+
+/*****************************************************************************
+  Game results CSS is found here
+*****************************************************************************/
+
+/*
+  Make sure the content inside the game element is centered, and doesn't
+  expand past the max width of 800px.
+*/
+#game {
+  max-width: 800px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/*
+  Use flexbox to evenly distribute the left and right space to the two sides
+  of the Rock Paper Scissors "duel" between the left and right hands
+*/
+#duel {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+/* Set the width of the hand containers to be relative to the total width */
+#left,
+#right {
+  width: 30%;
+}
+
+/*****************************************************************************
+  Hand animation related CSS is found here
+*****************************************************************************/
+/* We need to offset the origin for the hands to rotate from their "wrists" */
+#left {
+  transform-origin: -75%;
+}
+#right {
+  transform-origin: 175%;
+}
+
+/* Attach the right and left animations, and set the length for 2 seconds */
+#game.animate #left {
+  animation: leftShake 2s;
+}
+#game.animate #right {
+  animation: rightShake 2s;
+}
+
+/* Rotate the hands for the traditional "shake, shake, show!" movement */
+@keyframes leftShake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  30%, 62%, 94% {
+    transform: rotate(-20deg);
+  }
+  37%, 69% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes rightShake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  30%, 62%, 94% {
+    transform: rotate(20deg);
+  }
+  37%, 69% {
+    transform: rotate(-10deg);
+  }
+}
+
+/*****************************************************************************
+  Hand visibility related CSS is found here (includes some animation classes)
+*****************************************************************************/
+
+/* Hide all hand variations by default, and make them fill their containers */
+/* Also, when animating, hide the non-rock hand variations */
+#rockLeft,
+#paperLeft,
+#scissorsLeft,
+#rockRight,
+#paperRight,
+#scissorsRight,
+#game.animate #paperLeft,
+#game.animate #scissorsLeft,
+#game.animate #paperRight,
+#game.animate #scissorsRight{
+  display: none;
+  width: 100%;
+}
+
+/* Hide the game and results related text while the animation is going */
+#game.animate #selections,
+#game.animate #result,
+#game.animate #playAgain {
+  visibility: hidden;
+}
+
+/*
+  When the selected class is applied to a hand variation, we need to make it
+  visible again, so we set display back to block.  Only one hand variation
+  per side (left vs right) should be visible at a time.
+*/
+/* However, when animating, both rock hand variations should be visible */
+#game.animate #rockLeft,
+#game.animate #rockRight,
+#rockLeft.selected,
+#paperLeft.selected,
+#scissorsLeft.selected,
+#rockRight.selected,
+#paperRight.selected,
+#scissorsRight.selected {
+  display: block;
+}
+
+/*****************************************************************************
+  Button related CSS is found here
+*****************************************************************************/
+/* Add spacing, sizing, and color, along with turning on transitions */
+button {
+  background:darkgreen;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 150px;
+  color: white;
+  margin: 24px 12px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+/* Make the button grow when hovered over */
+button:hover {
+  transform: scale(2.1);
+}
+/* Flip the gradient when clicked on */
+button:active {
+  background:black;
+}
+/* Hide that obnoxious orange outline when clicked in Chrome */
+button:focus-visible {
+  outline: 0;
+}
