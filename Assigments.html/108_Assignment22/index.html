@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Bouncing Ball</title>
-<style>
+    <style>
     #room{
       border: 5px solid black;
       position: relative;
@@ -19,29 +19,7 @@
       justify-content: center;
       position: relative;
     }
-let roomWidth = 600px;
-let roomheight = 500px;
-let ballWidth = 80;
-let ballHeight = 80;
-
-    let room = document.getElementById("room");
-    room.style.width = roomWidth + "px";
-    room.style.height = roomheight + "px";
-
-    let ball = document.getElementById("ball");
-    ball.style.width = ballWidth + "px";
-    ball.style.height = ballHeight + "px";
-
-let ballX =0;
-let ballY =0;
-let ballXSpeed =3;
-let ballYSpeed =0;
-let gravity = 0.3;
-
-
-
     </style>
-
   </head>
   <body>
 
@@ -50,6 +28,48 @@ let gravity = 0.3;
   </div>
   <script type="text/javascript">
 
+  let roomWidth = 1600px;
+  let roomheight = 1500px;
+  let ballWidth = 80;
+  let ballHeight = 80;
+
+      let room = document.getElementById("room");
+      room.style.width = roomWidth + "px";
+      room.style.height = roomheight + "px";
+
+      let ball = document.getElementById("ball");
+      ball.style.width = ballWidth + "px";
+      ball.style.height = ballHeight + "px";
+
+  let ballX =0;
+  let ballY =0;
+  let ballXSpeed =3;
+  let ballYSpeed =0;
+  let gravity = 0.3;
+   function moveball() {
+     ballYSpeed += gravity;
+     ballX += ballXSpeed;
+     ballY += ballYSpeed;
+
+     if (ballX < 0 || ballX + ballWidth > roomWidth){
+       if (ballX < 0){
+         ballX = 0;
+       } else {
+         ballX = roomWidth = ballWidth;
+       }
+       ballXSpeed *= -1;
+     }
+     if (ballY + ballHeight > roomheight){
+       if (ballY + ballHeight > roomheight){
+         ballY = roomheight - ballHeight;
+       }
+       ballXSpeed *= 0.99;
+       ballYSpeed *= -0.85;
+     }
+     ball.style.left = ballX + 'px';
+     ball.style.top = ballY + 'px';
+   }
+   setInterval(moveball, 10);
   </script>
 
   </body>
