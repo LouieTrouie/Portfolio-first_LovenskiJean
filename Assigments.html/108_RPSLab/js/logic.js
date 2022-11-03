@@ -19,7 +19,7 @@ function getRandomPick() {
 
 function getResultText(computerPick, playerPick){
   const TIE = "Are You A Mind Reader!";
-  const WIN = " You Win!";
+  const WIN = " Winner Winner, Chicken Dinner!";
   const LOSE = " You Suck, Try Again!";
 
 
